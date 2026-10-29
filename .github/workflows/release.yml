@@ -10,6 +10,8 @@ jobs:
     uses: fzltech/.github/.github/workflows/release-version.yml@main
     with:
       version-file: VERSION
+    secrets:
+      RELEASE_PAT: ${{ secrets.RELEASE_PAT }}
     permissions:
       contents: write
       pull-requests: read
