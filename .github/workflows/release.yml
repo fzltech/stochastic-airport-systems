@@ -1,0 +1,15 @@
+name: Release
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+  pull-requests: read
+jobs:
+  release:
+    uses: fzltech/.github/.github/workflows/release-version.yml@main
+    with:
+      version-file: VERSION
+    permissions:
+      contents: write
+      pull-requests: read
